@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+(return 2>/dev/null) && isSourced=1 || isSourced=0
+
+set -e
+
+if ((isSourced)); then
+  echo sourced
+else
+  echo executed
+fi
+
